@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+/* Main container for elements*/
+.main {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  width: 60vw;
+  height: 60vh;
+  min-height: 280px;
+  min-width: 196px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Gloria Hallelujah", cursive;
+  border: 2px solid black;
+}
+
+h1 {
+  position: absolute;
+  top: 2%;
+  height: 20%;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+  font-size: 1.2em;
+}
+/* messege about win, loss, drew*/
+.message {
+  display: none;
+  position: absolute;
+  left: -10%;
+  top: -5%;
+  font-size: 10px;
+  border: 2px solid black;
+  padding: 2%;
+  background-color: silver;
+}
+
+/* position div */
+.allDiv {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  padding-top: 20%;
+  opacity: 0;
+}
+
+.div {
+  flex-basis: 30%;
+  min-height: 30%;
+}
+
+/* border div for board  */
+div [data-key="0"] {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+div [data-key="1"] {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+div [data-key="2"] {
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+div [data-key="3"] {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+div [data-key="4"] {
+  border: 2px solid black;
+}
+
+div [data-key="5"] {
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+div [data-key="6"] {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+div [data-key="7"] {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+}
+
+div [data-key="8"] {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  max-width: 20%;
+}
+
+/*Tabel Score*/
+.scores {
+  position: absolute;
+  top: 105%;
+  right: 0%;
+  width: 100%;
+  height: 15%;
+  opacity: 0;
+  text-align: center;
+  font-weight: bold;
+  border: solid 2px black;
+  display: flex;
+  flex-direction: nowrap;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  font-size: 0.8em;
+  flex-shrink: 1;
+}
+
+/* Board Start game*/
+.startGame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1em;
+  text-shadow: 2px 2px 10px black;
+}
+.startGame button {
+  width: 60%;
+  height: 20%;
+  margin-top: 20%;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 25%;
+  box-shadow: 1px 1px 10px inset white, 5px 3px 1px black;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+  font-family: "Gloria Hallelujah", cursive;
+  cursor: pointer;
+}
+.startGame button:hover {
+  transform: translateY(-10%);
+  background-color: white;
+  color: black;
+  text-shadow: 2px 3px 5px black;
+  box-shadow: 1px 1px 10px inset black, 5px 3px 1px black;
+}
+.startGame p {
+  border-bottom: 5px dotted black;
+  border-top: 5px dotted black;
+}
+
+/*Media Queris*/
+
+@media (min-width: 340px) {
+  .scores {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 400px) {
+  .scores {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 425px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  .scores {
+    height: 20%;
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  img {
+    transform: translate(-50%, -50%);
+  }
+
+  .scores {
+    font-size: 1.4em;
+  }
+  .startGame {
+    font-size: 2em;
+  }
+  .main {
+    height: 70vh;
+    transform: translate(-50%, 10%);
+  }
+  .startGame button {
+    margin-top: 10%;
+  }
+  .message {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.7em;
+  }
+  .scores {
+    top: 0%;
+    right: -25%;
+    width: 20%;
+    height: 50%;
+    flex-direction: column;
+  }
+  .main {
+    height: 80vh;
+  }
+}
+@media (min-width: 2560px) {
+  h1 {
+    font-size: 4em;
+  }
+  .scores {
+    font-size: 2.5em;
+  }
+}
