@@ -295,8 +295,38 @@ function showBoard() {
   document.querySelector(".startGame").style.transform = "translateX(200%)";
   document.querySelector(".allDiv").style.opacity = "1";
   document.querySelector(".scores").style.opacity = "1";
+  document.querySelector(".backMenu").style.opacity = "1";
   startGame();
 }
 
 choiceLevel()
 buttonStart.addEventListener("click", showBoard);
+
+// powrót do menu i zapisanie lub nie 
+function backMenu() {
+  const saveInput = document.querySelector(".backMenu input")
+  const saveButton = document.querySelector(".backMenu button")
+  let save;
+  saveInput.addEventListener("click", (e) => {
+    save = e.target.checked
+    return save
+  })
+
+  saveButton.addEventListener("click", (e) => {
+
+    if (save === true) {
+      document.querySelector(".startGame").style.display = "block";
+      document.querySelector(".startGame").style.transform = "translate(-50%, -50%)";
+      document.querySelector(".allDiv").style.opacity = "0";
+      document.querySelector(".scores").style.opacity = "0";
+      document.querySelector(".backMenu").style.opacity = "0";
+
+    } else {
+      window.location.reload()
+    }
+
+
+  })
+
+}
+backMenu()

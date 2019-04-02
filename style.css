@@ -151,7 +151,6 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width:100%;
   height: 60%;
   transform: translate(-50%, -50%);
@@ -208,6 +207,51 @@ div.level span:hover{
   border-bottom: 5px dotted black;
 }
 
+/*Back menu */
+.backMenu{
+  position: absolute;
+  top: 123%;
+  right: -25%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: wrap;
+  justify-content: space-around; 
+  font-size: 0.8em;
+  text-align: center;
+  opacity: 0;
+}
+.backMenu button{
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 25%;
+  box-shadow: 1px 1px 10px inset white;
+  font-size: 0.7em;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+  font-family:  "Gloria Hallelujah";
+  cursor: pointer;
+}
+.backMenu button:hover {
+  transform: translateY(-10%);
+  background-color: white;
+  color: black;
+  text-shadow: 2px 3px 5px black;
+  box-shadow: 1px 1px 10px inset black, 5px 3px 1px black;
+}
+.backMenu input{
+  width: 10px;
+  height:10px;
+}
+.backMenu label{
+  width: 30%;
+  border: solid 1px black;
+  background-color: silver;
+}
+
 
 /*Media Queris*/
 
@@ -218,16 +262,34 @@ div.level span:hover{
     font-size: 13px;}
   .scores {
     font-size: 0.9em;
-  }
-}
+  }}
+
+  
 @media (min-width: 400px) {
   .scores {
     font-size: 1em;
   }
   .startGame button {
     width: 100px
-
-}}
+}
+.backMenu{
+  top: 119%;
+  left: 101%;
+  width: 30%;
+  height: 20%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+.backMenu button{
+  width: 100%;
+  height: 40%;
+}
+.backMenu label{
+  width: 100%; 
+}
+}
 
 @media (min-width: 425px) {
   h1 {
@@ -244,13 +306,25 @@ div.level span:hover{
     position: relative;
     top:50%;
     left:50%;
-    transform: translate(-50%,-50%)
-
+    transform: translate(-50%,-50%);
   }
 }
 @media (min-width: 600px) {
   .startGame {
     font-size: 0.9em;   
+  }
+  .backMenu{
+    font-size: 1em;
+  }
+  .backMenu input{
+    width: 11px;
+    height:11px;
+  }
+  .backMenu label{
+ height: 25px;  
+  }
+  .backMenu button{
+    height: 35%;
   }
   
 }
@@ -278,13 +352,16 @@ div.level span:hover{
   .message span {
     font-size: 1.5em;
   }
+  .backMenu{
+    top: 110%;   
+  }
+
 }
 
 @media (min-width: 1024px) {
   h1 {
     font-size: 2.7em;
   }
- 
   .scores {
     top: 0%;
     right: -25%;
@@ -302,15 +379,39 @@ div.level span:hover{
   .startGame button {
     width: 150px;
     margin-top: 5%;
+}
+.backMenu{
+  top: 60%; 
+}
+.backMenu button{
+  width: 150px;
+}
+.backMenu label{
+  width: 120px; 
+}
+.backMenu input{
+  width: 16px;
+  height:16px;
+}
+}
 
-}
-}
 @media (min-width: 1400px) {
 
   .startGame {
     font-size: 1.7em;
   }
+  .backMenu{
+  font-size: 1.5em;
+  }
+  .backMenu button{
+    width: 170px;
+  }
+  .backMenu label{
+    width: 120px; 
+    height: 50%;
+  } 
 }
+
 @media (min-width: 2560px) {
   h1 {
     font-size: 4em;
@@ -328,4 +429,14 @@ div.level span:hover{
     width: 240px;
     margin-top: 5%;
 }
+.backMenu{
+  font-size: 2.5em;
+  }
+  .backMenu button{
+    width: 250px;
+  }
+  .backMenu label{
+    width: 250px; 
+    height: 50%;
+  } 
 }
