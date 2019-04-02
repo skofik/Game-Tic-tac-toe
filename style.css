@@ -394,7 +394,15 @@ div.level span:hover{
   height:16px;
 }
 }
-
+@media (min-width: 1200px) {
+  .backMenu{
+    font-size:1.5em; 
+  }
+  .backMenu label{
+    width: 120px; 
+    height: 50%;
+  } 
+}
 @media (min-width: 1400px) {
 
   .startGame {
